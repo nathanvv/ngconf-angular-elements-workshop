@@ -12,7 +12,11 @@ export class ExternalDashboardTileService {
   load(): void {
     if (this.loaded) return;
 
-    // TODO: Load script
+    // TODO: Load script : Done
+    const script = document.createElement('script');
+    script.src = 'assets/external-dashboard-tile.bundle.js';
+    document.body.appendChild(script);
+    this.loaded = true;
   }
 
 }
